@@ -1,0 +1,25 @@
+var id = getSearch()[1];
+
+
+$.ajax({
+    url: 'http://139.199.192.48:9090/api/getcouponproduct',
+    data: { couponid: id },
+    success: function(data) {
+        $('#kfc_content').html(template('kfc_content_tpl', data.result));
+        // $(document).on('click', '.media', function() {
+        //     $(".cover").show();
+        //     var dataid = $(this)[0].dataset.id;
+        //     console.log($(this)[0].dataset.id)
+        //     var dom = data.result[dataid] || data.result[0]
+        //     console.log(dom)
+        //         // dataid = dataid == 60 ? '59' : dataid;
+        //     if (dataid == dom.couponProductId) {
+        //         $('#coures-tpl').html(template('swiper-tpl', dom.couponProductImg));
+        //     }
+        // });
+    }
+});
+$('.back').on('click', function() {
+    location.href = "/manmanbuy/html/discounts/discounts.html"
+});
+// 轮播

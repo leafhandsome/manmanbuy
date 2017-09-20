@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>凑拼单</title>
+    <link href="../../lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../less/gsproduct1/gsproduct.css">
+</head>
+
+<body>
+    <!--头部  -->
+    <div class="cou_header"></div>
+    <!--下部  -->
+    <div class="list">
+        <div class="hd">
+            <div class="filter">
+                <ul id="gsp">
+                    <li class="shop">
+                        <a href="javascript:;">京东</a>
+                        <i class="my_iconfont">&#xe610;</i>
+                    </li>
+                    <li class="dis">
+                        <a href="javascript:;">华北</a>
+                        <i class="my_iconfont">&#xe610;</i>
+                    </li>
+                    <li class="count">
+                        <a href="javascript:;">1元</a>
+                        <i class="my_iconfont">&#xe610;</i>
+                    </li>
+                </ul>
+            </div>
+            <div class="search">
+                <i class="my_iconfont">&#xe609;</i>
+            </div>
+            <!--各种下拉框  -->
+            <!--店铺  -->
+            <div class="all">
+                <div class="popsort popbox clearfix ">
+                    <ul id="one_son">
+                        <!--店铺模板引擎渲染  -->
+                        <!-- <li>
+                            <i class="my_iconfont">&#xe600;</i>
+                            <a href="javascript:;">京东</a>
+
+                        </li> -->
+                        <!-- <li><a href="javascript:;">一号店</a></li>
+                        <li><a href="javascript:;">天猫</a></li> -->
+                    </ul>
+                </div>
+                <!--地区  -->
+                <div class="popprice popbox">
+                    <ul id="poprice_dis">
+                        <!--地区模板引擎渲染  -->
+                        <!-- <li>
+                            <i class="my_iconfont">&#xe600;</i>
+                            <a href="javascript:;">华北（北京、山西等）</a>
+                        </li>
+                        <li><a href="javascript:;">华东（山东、浙江等）</a></li>
+                        <li><a href="javascript:;">华南（广东、广西等）</a></li>
+                        <li><a href="javascript:;">华中（湖北、河南等）</a></li> -->
+                    </ul>
+                </div>
+                <!--价格  -->
+                <div class="popcat popbox">
+                    <ul id="price_box">
+                        <li>
+                            <i class="my_iconfont">&#xe600;</i>
+                            <a href="#">全部价格</a>
+                        </li>
+                        <li><a href="#">1-3元</a></li>
+                        <li><a href="#">3-5元</a></li>
+                        <li><a href="#">8-18元</a></li>
+                        <li><a href="#">30-50元</a></li>
+                    </ul>
+                </div>
+                <!--搜索框  -->
+                <div class="popsearch popbox">
+                    <div class="forsearch">
+                        <div class="txt">
+                            <a href="javascript:;">
+                                <i class="my_iconfont">&#xe60c;</i>
+                            </a>
+                            <input type="search" placeholder="搜索您想要的凑单品">
+                        </div>
+                        <div class="smt">
+                            <input type="button" value="搜索">
+                        </div>
+                    </div>
+                    <div class="select">
+                        <div class="t">排序</div>
+                        <div class="c">
+                            <ul>
+                                <li><a href="#">销量</a></li>
+                                <li><a href="#">价格↑</a></li>
+                                <li><a href="#">价格↓</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="select">
+                        <div class="t">分类</div>
+                        <div class="c">
+                            <ul>
+                                <li><a href="#">全部</a></li>
+                                <li><a href="#">家居</a></li>
+                                <li><a href="#">数码</a></li>
+                                <li><a href="#">办公</a></li>
+                                <li><a href="#">个户</a></li>
+                                <li><a href="#">食品</a></li>
+                                <li><a href="#">母婴</a></li>
+                                <li><a href="#">服饰</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+
+
+<!-- 店铺   引擎模板渲染  -->
+<script type="text/template" id="shop_tpl">
+    {{each $data dataValue i}}
+    <li class='aaa' data-id='{{dataValue.shopId}}'>
+        <!--添加一个属性，在一打开页面就显示有打钩  -->
+        <i class="my_iconfont {{dataValue.shopId==0?'':'haha'}} ">&#xe600;</i>
+        <a href="javascript:;">{{dataValue.shopName}}</a>
+    </li>
+    {{/each}}
+</script>
+
+<!--地区模板引擎渲染  -->
+<script type="text/template" id="popprice_tpl">
+    {{each $data dataValue i}}
+    <li class='area' data-id='{{dataValue.areaId}}'>
+        <!--添加一个属性，在一打开页面就显示有打钩  -->
+        <i class="my_iconfont {{dataValue.areaId==0?'':'are'}}">&#xe600;</i>
+        <a href="javascript:;">{{dataValue.areaName}}</a>
+    </li>
+    {{/each}}
+</script>
+
+
+
+
+<script src="../../lib/jquery/jquery.min.js"></script>
+<script src="../../lib/bootstrap/js/bootstrap.js"></script>
+<script src="../../lib/jquery/template-web.js"></script>
+<script src="../../js/gsproduct1/gsproduct.js"></script>
+
+</html>

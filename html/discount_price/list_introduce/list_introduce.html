@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>列表介绍</title>
+
+    <!-- Bootstrap -->
+    <link href="../../../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../less/discount_price/list_introduce/list_introduce.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!--头部国内折扣  -->
+    <div class="discout_header">
+        <div class="back">
+            <a href="javascript:;" onClick="javascript :history.back(-1)">
+                <i class="glyphicon glyphicon-chevron-left"></i>
+            </a>
+        </div>
+        <h1> 国内折扣</h1>
+        <div class="home_app">
+            <a href="#">
+                <img src="../../../images/header_app.png" alt="">
+            </a>
+        </div>
+    </div>
+    <!--下部  -->
+    <form id="comment_Form" action="">
+        <!-- <div class="container">
+            <h3 class="title">Seagate Backup Plus Hub 黑色 4TB</h3>
+            <h4>68.89元</h4>
+            <div class="infor">
+                <span class="mall">中国亚马逊</span>
+                <span class="time">09-17 14:21</span>
+                <span class="author">路_无_归/ 慢慢买</span>
+            </div> -->
+        <!--图片和介绍  -->
+        <!-- <div class="content">
+                <div class="samll_wrap clearfix">
+                    <img src="../../../images/1.jpg" alt="">
+                </div>
+                <div class="big_wrap">
+                    <img src="../../../images/1.jpg" alt="">
+                </div>
+                <div class="content_down">
+                    <p>近期好价，喜欢的看看中亚prime会员免邮</p>
+                </div>
+            </div> -->
+        <!--如果到时候有地址在这里添加代码  -->
+
+        <!--前往购买  -->
+        <!-- <div class="golink">
+                <a href="javascript:;">
+                    <span class="gobuy">前往购买</span>
+                </a>
+            </div> -->
+        <!--评论区  -->
+        <!-- <div class="commentBox">
+                <div class="com_title">发表评论</div> -->
+        <!--回答区  -->
+        <!-- <div class="reply">
+                    <textarea name="" id="" rows="4"></textarea>
+                    <div class="air">
+                        <input type="submit" name="" value="发表评论">
+                    </div>
+                </div> -->
+        <!--最新评论  -->
+        <!-- <div class="new_comment">最新评论</div> -->
+        <!--评论追加区  -->
+        <!-- <div class="list_comment">
+                    <ul></ul>
+                </div>
+            </div>
+        </div> -->
+    </form>
+
+
+
+    <!--引擎模板渲染  -->
+    <script type="text/template" id="comment_tlp">
+        {{each $data dataValue i}}
+        <div class="container">
+            <input type="hidden" name='dataValue.productId' value="{{dataValue.productId}}">
+            <h3 class="title">{{dataValue.productName}}</h3>
+            <h4>{{dataValue.productPinkage}}</h4>
+            <div class="infor">
+                <span class="mall">{{dataValue.productFrom}}</span>
+                <span class="time">{{dataValue.productTime}}</span>
+                <span class="author">{{dataValue.productTips}}</span>
+            </div>
+            <!--图片和介绍  -->
+            <div class="content">
+                <div class="samll_wrap">
+                    <!-- <img src="{{@dataValue.productImgSm}}" alt=""> -->
+                    {{@dataValue.productImg}}
+                </div>
+                <div class="big_wrap">
+                    <!-- <img src="../../../images/1.jpg" alt=""> -->
+                    {{@dataValue.productImg}}
+                </div>
+                <div class="content_down">
+                    <p>{{dataValue.productInfo}}</p>
+                </div>
+            </div>
+            <!--如果到时候有地址在这里添加代码  -->
+
+            <!--前往购买  -->
+            <div class="golink">
+                <a href="javascript:;">
+                    <span class="gobuy">前往购买</span>
+                </a>
+            </div>
+            <!--评论区  -->
+            <div class="commentBox">
+                <!-- <div class="com_title">发表评论</div> -->
+                <!--回答区  -->
+                <!-- <div class="reply">
+                    <textarea name="" id="" rows="4"></textarea>
+                    <div class="air">
+                        <input type="submit" name="" value="发表评论">
+                    </div>
+                </div> -->
+                <!--最新评论  -->
+                <!-- <div class="new_comment">最新评论</div> -->
+                <!--评论追加区  -->
+                <div class="list_comment">
+                    {{@dataValue.productComment}}
+                    <ul></ul>
+                </div>
+                <div>标签：
+                    <a href="javascript:;">{{dataValue.productName}}</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../../../lib/jquery/jquery.min.js"></script>
+    <script src="../../../lib/jquery/template-web.js"></script>
+    <script src="../../../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../js/common/unit.js"></script>
+    <script src="../../../js/discount_price/list_introduce/list_introduce.js"></script>
+</body>
+
+</html>

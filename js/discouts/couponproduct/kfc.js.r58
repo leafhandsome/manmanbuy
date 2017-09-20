@@ -1,0 +1,36 @@
+var id = getSearch()[1];
+// console.log(id);
+
+$.ajax({
+    url: 'http://139.199.192.48:9090/api/getcouponproduct',
+    data: { couponid: id },
+    success: function(data) {
+        $('#kfc_content').html(template('kfc_content_tpl', data.result));
+        // console.log(id);
+        // $('#coures-tpl').html(template('swiper-tpl', data.result))
+        // var img = $('#coures-img img');
+        $(document).on('click', '.media', function() {
+            $(".cover").show();
+            var dataid = $(this)[0].dataset.id;
+            console.log($(this)[0].dataset.id)
+            console.log(data.result[dataid]);
+
+            if (dataid == data.result[dataid].couponProductId) {
+                var img = JSON.parse(data.result[dataid].couponProductImg);
+                console.log(img);
+
+                $('#coures').html(img);
+            }
+        });
+    }
+})
+$('.back').on('click', function() {
+    location.href = "/manmanbuy/html/discounts/discounts.html"
+});
+// 轮播
+
+
+// $('.cover').on('click', function() {
+//     $(".cover").hide()
+// })
+$('#coures')

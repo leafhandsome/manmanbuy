@@ -1,0 +1,252 @@
+@import 'iconfont.css';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #666;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* 解决点击高亮*/
+  -webkit-tap-highlight-color: transparent;
+}
+input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+img {
+  display: block;
+  width: 100%;
+}
+ul {
+  list-style: none;
+}
+.clearfix:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+.list {
+  background-color: #fff;
+}
+.list .hd {
+  position: relative;
+  height: 38px;
+  padding-right: 45px;
+}
+.list .hd .filter {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid #dadada;
+}
+.list .hd .filter ul {
+  width: 100%;
+  list-style: none;
+}
+.list .hd .filter ul li {
+  float: left;
+  line-height: 37px;
+  width: 33%;
+  box-sizing: border-box;
+  position: relative;
+  padding-left: 58px;
+}
+.list .hd .filter ul li a {
+  position: relative;
+  width: 60px;
+  font-size: 16px;
+  text-align: center;
+  overflow: hidden;
+  height: 37px;
+}
+.list .hd .filter ul li i {
+  font-size: 32px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  top: 4px;
+  left: 104px;
+  position: absolute;
+}
+.list .hd .search {
+  width: 46px;
+  position: relative;
+  border-bottom: 1px solid #dadada;
+  text-align: center;
+  border-left: 1px solid #dadada;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.list .hd .my_iconfont {
+  display: inline-block;
+  width: 40px;
+  height: 37px;
+  font-size: 26px;
+}
+.list .hd .popbox {
+  width: 100%;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0px;
+  top: 38px;
+}
+.list .hd .popsort {
+  display: none;
+}
+.list .hd .popsort ul {
+  list-style: none;
+}
+.list .hd .popsort ul li {
+  border-bottom: 1px solid #dadada;
+  border-width: 0 0 1px 0;
+}
+.list .hd .popsort ul li a {
+  display: block;
+  line-height: 40px;
+  padding: 0px 10px;
+}
+.list .hd .popsort ul li .my_iconfont {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  float: right;
+  color: red;
+}
+.list .popprice {
+  display: none;
+}
+.list .popprice ul {
+  list-style: none;
+}
+.list .popprice ul li {
+  border-bottom: 1px solid #dadada;
+  border-width: 0 0 1px 0;
+}
+.list .popprice ul li a {
+  display: block;
+  line-height: 40px;
+  padding: 0px 10px;
+}
+.list .popprice ul li .my_iconfont {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  float: right;
+  color: red;
+}
+.list .popcat.pri {
+  display: block;
+  z-index: 10;
+}
+.list .popcat {
+  display: none;
+}
+.list .popcat ul {
+  list-style: none;
+}
+.list .popcat ul li {
+  border-bottom: 1px solid #dadada;
+  border-width: 0 0 1px 0;
+}
+.list .popcat ul li a {
+  display: block;
+  line-height: 40px;
+  padding: 0px 10px;
+}
+.list .popcat ul li .my_iconfont {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  float: right;
+  color: red;
+}
+.list .popsearch {
+  display: none;
+  z-index: 10;
+  padding: 10px 0px;
+  background-color: #f7f7f7;
+}
+.list .popsearch .forsearch {
+  padding-bottom: 10px;
+}
+.list .popsearch .forsearch .txt {
+  float: left;
+  margin-left: 10px;
+}
+.list .popsearch .forsearch .txt input {
+  padding: 0px 26px;
+  height: 35px;
+  font-size: 14px;
+  display: inline-block;
+  border-radius: 10px;
+  border: 1px solid #d1d1d1;
+}
+.list .popsearch .forsearch .txt a .my_iconfont {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: absolute;
+  font-size: 22px;
+  left: 14px;
+  top: 14px;
+}
+.list .popsearch .forsearch .smt {
+  float: right;
+  width: 52px;
+  text-align: left;
+  height: 36px;
+}
+.list .popsearch .select .t {
+  font-size: 14px;
+  padding: 10px 10px 0px 10px;
+  float: left;
+}
+.list .popsearch .select .c ul {
+  border-bottom: 1px solid;
+  width: 100%;
+  display: table;
+  padding: 0 10px 10px 0;
+  box-sizing: border-box;
+}
+.list .popsearch .select .c ul li {
+  border-radius: 3px;
+  border: 1px solid #eaeaea;
+  width: 25%;
+  float: left;
+  display: table-cell;
+  box-sizing: border-box;
+  padding: 5px 0 5px 0px;
+}
+.list .popsearch .select .c ul li a {
+  text-align: center;
+}
+.on {
+  display: block !important;
+  z-index: 10;
+}
+.list .hd .popsort ul li .my_iconfont.haha {
+  display: none;
+  z-index: 10;
+}
+.list .hd .popsort ul li:first-of-type {
+  display: block;
+}
+.list .popprice ul li .my_iconfont.are {
+  display: none;
+  z-index: 10;
+}

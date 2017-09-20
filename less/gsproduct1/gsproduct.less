@@ -1,0 +1,237 @@
+@import '../base.less';
+@import './iconfont.css';
+//下部
+.list {
+    background-color: #fff;
+    .hd {
+        position: relative;
+        height: 38px;
+        padding-right: 45px;
+        .filter {
+            // -webkit-box-flex: 1;
+            width: 100%; // background-color: yellow;
+            overflow: hidden;
+            border-bottom: 1px solid #dadada;
+            ul {
+                width: 100%;
+                list-style: none;
+                li {
+                    float: left;
+                    line-height: 37px;
+                    width: 33%;
+                    box-sizing: border-box;
+                    position: relative;
+                    padding-left: 58px;
+                    a {
+                        position: relative;
+                        width: 60px;
+                        font-size: 16px;
+                        text-align: center;
+                        overflow: hidden;
+                        height: 37px;
+                    }
+                    i {
+                        font-size: 32px;
+                        display: inline-block;
+                        width: 24px;
+                        height: 24px;
+                        top: 4px;
+                        left: 104px;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+        .search {
+            width: 46px;
+            position: relative;
+            border-bottom: 1px solid #dadada;
+            text-align: center;
+            border-left: 1px solid #dadada;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        } //隐藏属性
+        .my_iconfont {
+            display: inline-block;
+            width: 40px;
+            height: 37px;
+            font-size: 26px;
+        }
+        .popbox {
+            width: 100%;
+            background-color: #ffffff;
+            position: absolute;
+            left: 0px;
+            top: 38px; // display: none;
+            // box-shadow: 0px 3px 6px #dddddd; 
+        } //店铺
+        // .popsort.on {
+        //     display: block;
+        //     z-index: 10;
+        // }
+        .popsort {
+            display: none;
+            ul {
+                list-style: none;
+                li {
+                    border-bottom: 1px solid #dadada;
+                    border-width: 0 0 1px 0;
+                    a {
+                        display: block;
+                        line-height: 40px;
+                        padding: 0px 10px;
+                    }
+                    .my_iconfont {
+                        width: 20px;
+                        height: 20px;
+                        display: inline-block;
+                        float: right;
+                        color: red;
+                    }
+                }
+            }
+        }
+    } //地区
+    // .popprice.one {
+    //     display: block;
+    //     z-index: 10;
+    // }
+    .popprice {
+        display: none;
+        ul {
+            list-style: none;
+            li {
+                border-bottom: 1px solid #dadada;
+                border-width: 0 0 1px 0;
+                a {
+                    display: block;
+                    line-height: 40px;
+                    padding: 0px 10px;
+                }
+                .my_iconfont {
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    float: right;
+                    color: red;
+                }
+            }
+        }
+    } //价格
+    .popcat.pri {
+        display: block;
+        z-index: 10;
+    }
+    .popcat {
+        display: none;
+        ul {
+            list-style: none;
+            li {
+                border-bottom: 1px solid #dadada;
+                border-width: 0 0 1px 0;
+                a {
+                    display: block;
+                    line-height: 40px;
+                    padding: 0px 10px;
+                }
+                .my_iconfont {
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    float: right;
+                    color: red;
+                }
+            }
+        }
+    } //搜索框
+    .popsearch {
+        display: none;
+        z-index: 10;
+        padding: 10px 0px;
+        background-color: #f7f7f7;
+        .forsearch {
+            padding-bottom: 10px;
+            .txt {
+                float: left;
+                margin-left: 10px;
+                input {
+                    padding: 0px 26px;
+                    height: 35px;
+                    font-size: 14px;
+                    display: inline-block;
+                    border-radius: 10px;
+                    border: 1px solid #d1d1d1;
+                }
+                a {
+                    .my_iconfont {
+                        width: 20px;
+                        height: 20px;
+                        display: inline-block; // float: left;
+                        position: absolute;
+                        font-size: 22px;
+                        left: 14px;
+                        top: 14px;
+                    }
+                }
+            }
+            .smt {
+                float: right;
+                width: 52px;
+                text-align: left;
+                height: 36px;
+            }
+        } //
+        .select {
+            .t {
+                font-size: 14px;
+                padding: 10px 10px 0px 10px;
+                float: left;
+            }
+            .c {
+                ul {
+                    border-bottom: 1px solid;
+                    width: 100%;
+                    display: table;
+                    padding: 0 10px 10px 0;
+                    box-sizing: border-box;
+                    li {
+                        border-radius: 3px;
+                        border: 1px solid #eaeaea;
+                        width: 25%;
+                        float: left;
+                        display: table-cell;
+                        box-sizing: border-box;
+                        padding: 5px 0 5px 0px;
+                        a {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//公共的部分
+ .on {
+    display: block !important;
+    z-index: 10;
+}
+
+//隐藏显示 店铺
+.list .hd .popsort ul li .my_iconfont.haha {
+    display: none;
+    z-index: 10;
+}
+
+//第一个显示
+.list .hd .popsort ul li:first-of-type {
+    display: block;
+}
+
+//地区隐藏显示
+.list .popprice ul li .my_iconfont.are {
+    display: none;
+    z-index: 10;
+}
